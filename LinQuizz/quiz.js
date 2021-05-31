@@ -12,9 +12,19 @@ form.addEventListener('submit', e =>{
         }
     });
     // Display score
+    scrollTo(0,0);
     const scoreResult = document.querySelector('.score');
-    scoreResult.querySelector('span').textContent = `${score}%`;
     scoreResult.classList.remove('d-none');
+
+    let animatedScore = 0;
+    const animated = setInterval(()=>{
+        scoreResult.querySelector('span').textContent = `${animatedScore}%`;
+        if(animatedScore === score){
+            clearInterval(animated);
+        }else{
+            animatedScore++;
+        }
+    }, 10);
 });
 
 
