@@ -1,5 +1,6 @@
 const search = document.querySelector('form');
-const cityDetails = document.querySelector('.cityDetails')
+const cityDetails = document.querySelector('.cityDetails');
+const card = document.querySelector('.card');
 
 
 
@@ -22,6 +23,10 @@ const updateUI = data=>{
         <span>&deg;C</span>
     </div>
     `;
+
+    if(card.classList.contains('d-none')){
+        card.classList.remove('d-none');
+    }
 };
 
 search.addEventListener('submit', e=>{
