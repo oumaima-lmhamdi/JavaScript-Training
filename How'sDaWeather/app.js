@@ -1,6 +1,8 @@
 const search = document.querySelector('form');
 const cityDetails = document.querySelector('.cityDetails');
 const card = document.querySelector('.card');
+const time = document.querySelector('.time');
+const icon = document.querySelector('.icon img');
 
 
 
@@ -27,6 +29,15 @@ const updateUI = data=>{
     if(card.classList.contains('d-none')){
         card.classList.remove('d-none');
     }
+
+    // update the weather's condition icon
+    const iconSrc = `images/icons/${cityWeather.WeatherIcon}.svg`;
+    console.log(iconSrc)
+    icon.setAttribute('src', iconSrc);
+    // update the night/day image
+    const timeSrc = cityWeather.IsDayTime ? 'images/day.svg' : 'images/night.svg';
+    console.log(timeSrc);
+    time.setAttribute('src', timeSrc);
 };
 
 search.addEventListener('submit', e=>{

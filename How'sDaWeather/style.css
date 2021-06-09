@@ -1,5 +1,5 @@
 body{ 
-    background: url(bg.jpg) no-repeat center center fixed; 
+    background: url(images/bg.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8,4 +8,12 @@ body{
 
 .container{
     max-width: 400px;
+}
+
+.icon{
+    position: relative;
+    top: -50px;
+    border-radius: 50%;
+    width: 100px;
+    margin-bottom: -50px;
 }
