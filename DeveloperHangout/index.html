@@ -69,6 +69,31 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyC7PmpyAFku0iuyFavMEEXAmX8ipB_OxrA",
+        authDomain: "fir-project-27436.firebaseapp.com",
+        projectId: "fir-project-27436",
+        storageBucket: "fir-project-27436.appspot.com",
+        messagingSenderId: "23324564782",
+        appId: "1:23324564782:web:eee52a20d7f63cd884eebf",
+        measurementId: "G-5DE6HRLBN5"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+    </script>    
 </body>
 </html>
